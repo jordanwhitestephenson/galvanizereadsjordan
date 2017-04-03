@@ -76,4 +76,13 @@ router.put('/:id', function(req, res){
   });
 });
 
+
+// <--DELETE BOOK-->
+
+router.delete('/:id', function(req, res) {
+    Bookentry().where('id', req.params.id).del('id').then(function(result) {
+        console.log('successfully deleted', result);
+    });
+});
+
 module.exports = router;
