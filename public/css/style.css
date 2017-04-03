@@ -12,3 +12,8 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.bookdata {
+  font-size: 10px;
+  font-family: cursive;
+}
