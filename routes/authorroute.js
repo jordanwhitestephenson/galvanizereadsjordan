@@ -22,26 +22,23 @@ router.get('/:id', function(req, res) {
     });
 });
 
+// <--EDIT AUTHOR--->
+router.put('/:id', function(req, res){
+  Authorentry().where('id', req.params.id).update({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+  }).then(function(result){
+    res.json(result);
+  });
+});
 
-//ADD AUTHOR//
-// router.post('/', function(req, res) {
-//             knex('author').insert({
-//                     first_name: req.body.first_name,
-//                     last_name: req.body.last_name
-//                 }, 'id')
-//                 //create book
-//                 .then(result => {
-//                     return Bookentry().insert({
-//                       title: req.body.title,
-//                       genre: req.body.genre,
-//                       description: req.body.description,
-//                       cover_img_url: req.body.cover_img_url,
-//                     }, ['title', 'genre', 'discription', 'cover_img_url'])
-//                         .then(result => {
-//                             res.json(result)
-//                         });
-//                 })
-//         })
-// });
+// <--DELETE AUTHOR--->
+
+router.delete('/:id', function(req, res) {
+    Authorentry().where('id', req.params.id).del('id').then(function(result) {
+        console.log('YOU JUST DELETED AUTHOUR', result);
+    });
+});
+
 
 module.exports = router;
