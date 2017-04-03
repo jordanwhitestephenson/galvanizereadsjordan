@@ -8,7 +8,7 @@ $(document).ready(function() {
       }).then(function(data) {
           console.log(data)
           for (var j = 0; j < data.length; j++) {
-                  $('.bookTitle').append('<tr><td>' + '<p>' + data[j].title + '</p>' + '</tr></td>');
+                  $('.bookTitle').append('<tr><td>' + data[j].title + '</tr></td>');
               }
 
       });
