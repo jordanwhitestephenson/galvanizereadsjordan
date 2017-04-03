@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jordanwhitestephenson/galvanizereadsjordan#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "db": "^1.0.6",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
