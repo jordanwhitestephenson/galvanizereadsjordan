@@ -9,11 +9,13 @@ $(document).ready(function() {
           console.log(data)
           // <p class="post-meta" id = "shortsentence"> ${data[i].body} </p>
           for (var j = 0; j < data.length; j++) {
-                  $('.bookRow').append(`<tr><td class ="bookdata"> ${data[j].title} </td> <td class= "bookdata"> ${data[j].genre} </td></tr>`);
+                  $('.bookRow').append(`<tr><td class ="bookdata"> ${data[j].title} </td> <td class= "bookdata"> ${data[j].genre} </td><td class ="bookdata" id="shortsentence"> ${data[j].descripton} </td> <td class = "bookdata">${data[j].cover_img_url}</td></tr>`);
 
-                  $('.bookGenre').append('<tr>' + '<td class = "bookdata">' + data[j].genre + '</tr>' + '</td>')
-                  $('.bookDescription').append('<tr id = "shortsentence">' + '<td class = "bookdata" id= "shortsentence">' + data[j].description + '</tr>' + '</td>')
-                  $('.bookImg').append('<tr>' + '<td class = "bookdata">' + data[j].cover_img_url+ '</tr>' + '</td>')
+
+
+                  // $('.bookGenre').append('<tr>' + '<td class = "bookdata">' + data[j].genre + '</tr>' + '</td>')
+                  // $('.bookDescription').append('<tr id = "shortsentence">' + '<td class = "bookdata" id= "shortsentence">' + data[j].description + '</tr>' + '</td>')
+                  // $('.bookImg').append('<tr>' + '<td class = "bookdata">' + data[j].cover_img_url+ '</tr>' + '</td>')
               }
 
       });
