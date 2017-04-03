@@ -9,7 +9,9 @@ $(document).ready(function() {
           console.log(data)
           for (var j = 0; j < data.length; j++) {
                   $('.bookTitle').append('<tr>' + '<td class ="bookdata">' + data[j].title + '</tr>' + '</td>');
-                  $('.bookGenre').append('<tr>' + '<td>' + data[j].genre + '</tr>' + '</td>')
+                  $('.bookGenre').append('<tr>' + '<td class = "bookdata">' + data[j].genre + '</tr>' + '</td>')
+                  $('.bookDescription').append('<tr>' + '<td class = "bookdata">' + data[j].description+ '</tr>' + '</td>')
+                  $('.bookImg').append('<tr>' + '<td class = "bookdata">' + data[j].cover_img_url+ '</tr>' + '</td>')
               }
 
       });
