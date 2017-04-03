@@ -18,6 +18,10 @@
   "homepage": "https://github.com/jordanwhitestephenson/galvanizereadsjordan#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "db": "^1.0.6",
+    "express": "^4.15.2",
+    "knex": "^0.12.9",
+    "pg": "^6.1.5",
+    "postgresql": "0.0.1"
   }
 }
