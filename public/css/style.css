@@ -24,3 +24,16 @@ display: -webkit-box;
 -webkit-line-clamp: 1;
 -webkit-box-orient: vertical;
 }
+.bookView {
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+#shortDescription {
+  width: 250px;
+}
+
+.btn {
+  background-color: #b9a6e3;
+}

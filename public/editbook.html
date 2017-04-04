@@ -28,43 +28,36 @@
     <div class="container">
       <br><br>
       <center>
-      <a href= "books.html"><img src = "img/viewbooks.png"></a>
-      <div class="row center">
-
-        </center>
-        <table>
-        <thead>
-          <tr class = "bookOverview">
-
-              <th><h5 class = "bookTitle">Title</h5></th>
-              <th><h5 class = "bookGenre">Genre<h5></th>
-              <th><h5 class ="bookDescription">Description</h5></th>
-              <th><h5 class = "bookCover">Book Cover</h5></th>
-
-
-          </tr>
-        </thead>
-
-        <tbody class = "bookBody">
-          <!-- <tr class = "bookRow">
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr> -->
-        </tbody>
-      </table>
+        <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Book Name" id="book_title" type="text" class="validate">
+        </div>
       </div>
-      <br><br>
+      <div class="row">
+        <div class="input-field col s3">
+          <input placeholder="Genre" id="book_genre" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Discription" id="book_discription" type="text" class="validate">
+        </div>
+      </div>
+      <div class = "row">
+        <div class="input-field col s3">
+          <input placeholder="First Name" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s3">
+          <input placeholder="Last Name" id="last_name" type="text" class="validate">
+        </div>
+      </div>
+    </form>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit Editted Book
+   <i class="material-icons right">send</i>
+ </button>
+  </div>
 
     </div>
   </div>
@@ -89,7 +82,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/viewbooks.js"></script>
+  <script src="js/editBook.js"></script>
 
   </body>
 </html>
