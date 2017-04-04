@@ -19,9 +19,9 @@ $(document).ready(function() {
 
             <td><p>Filler</p></td>
 
-            <td><button type="button" class ="deleteBook" id = ${data[j].id}>
-            <a id=${data[j].id}> X </a>
-            </button></td><tr>`);
+            <td><button type="button" class ="deleteAuthor" id = ${data[j].id}>
+              <a id=${data[j].id}> X </a>
+              </button></td><tr>`);
 
             } else {
                 $('.authorBody').append(`<tr class = "authorOverview">
@@ -38,10 +38,10 @@ $(document).ready(function() {
 
             }
         }
-    })
+    });
 
     $(document).on('click', ".deleteAuthor", function(e){
-      console.log('YA!')
+      console.log('YA!');
         e.preventDefault();
         var deleteID = $(this).find('a').attr('id');
         console.log(deleteID);
@@ -51,7 +51,7 @@ $(document).ready(function() {
                 contentType: "application/json"
             })
             .then(response => {
-                window.location.reload(true);
+               console.log('you deleted this authors', deleteID)
             });
           });
-    })
+    });

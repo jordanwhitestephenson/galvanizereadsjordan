@@ -32,6 +32,19 @@ router.put('/:id', function(req, res){
   });
 });
 
+
+// <--ADD AUTHOR -->
+
+router.post('/', function(req, res){
+  Authorentry().insert({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name
+
+  }, ['first_name', 'last_name'] ).then(function(result){
+    res.json(result);
+  });
+});
+
 // <--DELETE AUTHOR--->
 
 router.delete('/:id', function(req, res) {

@@ -1,6 +1,8 @@
 $(document).ready(function() {
     $('.modal').modal();
     $('#modal1').modal('open');
+
+
     $.ajax({
         method: 'GET',
         url: '/book',
@@ -33,13 +35,19 @@ $(document).ready(function() {
 
                 <td class = "bookdata"> ${data[j].title} </td><td class = "bookdata"> ${data[j].genre} </td> <td class = "bookdata" id = "shortDescription"><p class="post-meta" id = "shortsentence"> ${data[j].description} </p></td>
 
+                <td><button type="button" class ="viewBookAuthors" id = ${data[j].id}>
+                <a id=${data[j].id}> Authors </a>
+                </button></td>
 
                   <td><button type="button" class ="editBook" id=${data[j].id}>
-                  <a id=${data[j].id} class= "editBook"> Edit </a></button>
+                  <a id=${data[j].id} class= "editBook"> Edit </a></button></td>
 
-                <button type="button" class ="deleteBook" id = ${data[j].id}>
+                <td><button type="button" class ="deleteBook" id = ${data[j].id}>
                 <a id=${data[j].id}> X </a>
-                </button><tr>`)
+                </button></td>
+
+
+                <tr>`)
             }
         }
 
@@ -52,19 +60,29 @@ $(document).ready(function() {
         });
     });
 
-// <--DELETE A BOOK-->
-    $(document).on('click', ".deleteBook", function(e) {
-        console.log('YA!')
+
+    //View Authors//
+    $(document).on('click','.viewBookAuthors', function(e) {
         e.preventDefault();
-        var deleteID = $(this).find('a').attr('id');
-        console.log(deleteID);
-        $.ajax({
-                method: "DELETE",
-                url: `/book/${deleteID}`,
-                contentType: "application/json"
-            })
-            .then(response => {
-                console.log('YOU DELETED', deleteID)
-            });
+        console.log('you clicked on', id)
+        var id = $(this).attr('id');
+        window.location = `/bookauthors.html?id=${id}`
+      })
+
+
+// <--DELETE A BOOK-->
+$(document).on('click', ".deleteBook", function(e) {
+console.log('YA!')
+e.preventDefault();
+var deleteID = $(this).find('a').attr('id');
+console.log(deleteID);
+$.ajax({
+        method: "DELETE",
+        url: `/book/${deleteID}`,
+        contentType: "application/json"
+    })
+    .then(response => {
+        console.log('YOU DELETED', deleteID)
     });
+});
 });
