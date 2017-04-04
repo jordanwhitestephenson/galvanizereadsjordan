@@ -46,3 +46,17 @@ display: -webkit-box;
   border-radius: 20px
 
 }
+
+.headings {
+  font-size: 20px;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: bold;
+}
+
+#book_photo {
+  width: 30%;
+  height: 30%;
+  border-width: thin;
+  border-color: black;
+  border-radius: 20px
+}

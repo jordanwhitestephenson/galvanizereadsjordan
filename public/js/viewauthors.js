@@ -32,16 +32,15 @@ $(document).ready(function() {
                 </td>
                 <td><p>Filler</p></td>
 
-                <td><button type="button" class ="deleteBook" id = ${data[j].id}>
+                <td><button type="button" class ="deleteAuthor" id = ${data[j].id}>
                 <a id=${data[j].id}> X </a>
                 </button></td><tr>`);
 
             }
         }
     })
-    console.log('WHERE THE HEL AR YOU')
 
-    $(document).on('click', ".deleteBook", function(e){
+    $(document).on('click', ".deleteAuthor", function(e){
       console.log('YA!')
         e.preventDefault();
         var deleteID = $(this).find('a').attr('id');
