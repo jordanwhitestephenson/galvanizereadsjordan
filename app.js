@@ -5,14 +5,14 @@ const PORT = process.env.PORT || 8000
 const bodyParser = require('body-parser')
 const authorFile = require('./routes/authorroute')
 const bookFile = require('./routes/bookroute')
-const authorbookFile = require('./routes/author_bookroute')
+const authorbookFile = require('./routes/authorbook')
 
 app.options('*', cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use('/author', authorFile)
 app.use('/book', bookFile)
-app.use('/author_book', authorbookFile)
+app.use('/authorbook', authorbookFile)
 app.use(express.static('public'));
 
 app.listen(PORT, ()=> {

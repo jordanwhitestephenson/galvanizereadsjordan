@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -27,38 +28,41 @@
     <div class="container">
       <br><br>
       <center>
-      <a href= "addbook.html"><img src = "img/addbook.png"></a>
+        <a href = "authors.html"><img src = "img/viewauthors.png"></a>
       <div class="row center">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="Book Name" id="book_title" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s3">
-              <input placeholder="Genre" id="book_genre" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input placeholder="Discription" id="book_discription" type="text" class="validate">
-            </div>
-          </div>
-          <div class = "row">
-            <div class="input-field col s3">
-              <input placeholder="First Name" id="first_name" type="text" class="validate">
-            </div>
-            <div class="input-field col s3">
-              <input placeholder="Last Name" id="last_name" type="text" class="validate">
-            </div>
-          </div>
-        </form>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Add Book
-       <i class="material-icons right">send</i>
-     </button>
-      </div>
+
         </center>
+        <table>
+        <thead>
+          <tr class = "authorOverview">
+              <th><h5 class = "bookCover">Photo</h5></th>
+              <th><h5 class = "bookTitle">First Name</h5></th>
+              <th><h5 class = "bookGenre">Last Name<h5></th>
+              <th><h5 class ="bookDescription">Bio</h5></th>
+              <th><h5 class ="authorBook">Books</h5></th>
+
+
+          </tr>
+        </thead>
+
+        <tbody class = "authorBody">
+          <!-- <tr class = "bookRow">
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr> -->
+        </tbody>
+      </table>
       </div>
       <br><br>
 
@@ -85,6 +89,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/viewauthors.js"></script>
 
   </body>
 </html>
