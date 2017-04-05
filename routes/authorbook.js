@@ -30,5 +30,15 @@ router.get('/author/:id', function(req, res) {
         });
 });
 
+router.post('/', function(req, res) {
+    AuthorBookentry().insert({
+            book_id: req.body.book_id,
+            author_id: req.body.author_id,
+        }, 'book_id', 'author_id')
+        .then(function(result) {
+            res.json(result);
+        });
+});
+
 
 module.exports = router;

@@ -22,13 +22,18 @@ $(document).ready(function() {
                 <td class = "bookdata" id = "shortDescription">
                 <p class="post-meta" id = "shortsentence"> ${data[j].description} </p></td>
 
-                <td><button type="button" class ="editBook" id=${data[j].id}>
-                <a id=${data[j].id} class= "editBook"> Edit </a></button>
+                <td><button type="button" class ="viewBookAuthors" id = ${data[j].id}>
+                <a id=${data[j].id}> Authors </a>
+                </button></td>
 
-                <button type="button" class ="deleteBook" id = ${data[j].id}>
+                  <td><button type="button" class ="editBook" id=${data[j].id}>
+                  <a id=${data[j].id} class= "editBook"> Edit </a></button></td>
+
+                <td><button type="button" class ="deleteBook" id = ${data[j].id}>
                 <a id=${data[j].id}> X </a>
-                </button><tr>
-            `)
+                </button></td>
+
+                <tr>`)
             } else {
 
                 $('.bookBody').append(`<tr class = "bookRow"><td> <img src= "${data[j].cover_img_url}" class = "authorPhoto"></td>
@@ -39,8 +44,8 @@ $(document).ready(function() {
                 <a id=${data[j].id}> Authors </a>
                 </button></td>
 
-                  <td><button type="button" class ="editBook" id=${data[j].id}>
-                  <a id=${data[j].id} class= "editBook"> Edit </a></button></td>
+                <td><button type="button" class ="editBook" id=${data[j].id}>
+                <a id=${data[j].id} class= "editBook"> Edit </a></button></td>
 
                 <td><button type="button" class ="deleteBook" id = ${data[j].id}>
                 <a id=${data[j].id}> X </a>
@@ -82,7 +87,11 @@ $.ajax({
         contentType: "application/json"
     })
     .then(response => {
+        location.href = location.href
+        window.location = "/books.html"
+
+
         console.log('YOU DELETED', deleteID)
-    });
+    })
 });
 });

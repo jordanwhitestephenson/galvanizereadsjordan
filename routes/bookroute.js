@@ -23,47 +23,35 @@ router.get('/:id', function(req, res) {
 });
 
 
-//ADD A BOOK//
-router.post('/', function(req, res) {
-    var userID;
-    console.log(res)
-    //if name is already used/
-    knex('author').where('last_name', req.body.last_name).select('id').then(result => {
-      if (result.length === 0) {
-        throw new Error ('NO AUTHOR!')
+
+
+
+
+
+
+// ADD A BOOK//
+router.post('/', (req, res) => {
+  knex('book').where('title', req.body.title).first()
+    .then(book => {
+      if (book) {
+        return [book.id];
+      } else {
+        return knex('book')
+          .returning('id')
+          .insert({title: req.body.title,
+                   genre: req.body.genre,
+                   description: req.body.description,
+                   cover_img_url: req.body.cover_img_url})
       }
-        // userID = result[0].id
-        return Bookentry().insert({
-          title: req.body.title,
-          genre: req.body.genre,
-          description: req.body.description,
-          cover_img_url: req.body.cover_img_url,
-        }, ['title', 'genre', 'description', 'cover_img_url'])
-        .then(function(result) {
-          res.json(result)
-          console.log('this is not catched', result)
-        })
     })
-        .catch(result => {
-            console.log('this is the catch result', result)
-            knex('author').insert({
-                    first_name: req.body.first_name,
-                    last_name: req.body.last_name
-                }, 'id')
-                //create book
-                .then(result => {
-                    return Bookentry().insert({
-                      title: req.body.title,
-                      genre: req.body.genre,
-                      description: req.body.description,
-                      cover_img_url: req.body.cover_img_url,
-                    }, ['title', 'genre', 'description', 'cover_img_url'])
-                        .then(result => {
-                            res.json(result)
-                        });
-                })
-        })
-});
+    .then((bookIds) => bookIds[0])
+    .then(bookId => {
+      res.status(200).send({book_id: bookId})
+    })
+    .catch(err => {
+      res.status(503).send(err.message)
+    })
+})
 // <--EDIT BOOK-->
 router.put('/:id', function(req, res){
   Bookentry().where('id', req.params.id).update({

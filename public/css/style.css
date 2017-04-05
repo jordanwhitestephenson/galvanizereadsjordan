@@ -64,3 +64,11 @@ display: -webkit-box;
   border-color: black;
   border-radius: 20px
 }
+
+.authorBookPhoto {
+  width: 50%;
+  height: 50%;
+  border-width: thin;
+  border-color: black;
+  border-radius: 20px
+}

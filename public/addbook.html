@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>J READS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>J READS</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">J Dubb's Reads</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
-      </ul>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">J Dubb's Reads</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+            </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="index.html">Home</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <center>
+                <a href="addbook.html"><img src="img/addbook.png"></a>
+                <div class="row center">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Book Name" id="book_title" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input placeholder="Genre" id="book_genre" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Discription" id="book_discription" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <!-- <DROP DOWN> -->
+                            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Authors</a>
+                            <ul id='dropdown1' class='dropdown-content'>
+                            </ul>
+                            <!-- </end drop down> -->
+
+                        </div>
+                    </form>
+
+                    <button class="btn waves-effect waves-light" type="submit" id="addBookButton" name="action">Add Book
+                      <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </center>
+        </div>
+        <br><br>
+
     </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <center>
-      <a href= "addbook.html"><img src = "img/addbook.png"></a>
-      <div class="row center">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="Book Name" id="book_title" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s3">
-              <input placeholder="Genre" id="book_genre" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input placeholder="Discription" id="book_discription" type="text" class="validate">
-            </div>
-          </div>
-          <div class = "row">
-            <div class="input-field col s3">
-              <input placeholder="First Name" id="first_name" type="text" class="validate">
-            </div>
-            <div class="input-field col s3">
-              <input placeholder="Last Name" id="last_name" type="text" class="validate">
-            </div>
-          </div>
-        </form>
-        <button class="btn waves-effect waves-light" type="submit" id="addBookButton" name="action">Add Book
-       <i class="material-icons right">send</i>
-     </button>
-      </div>
-        </center>
-      </div>
-      <br><br>
-
     </div>
-  </div>
 
 
 
 
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
 
 
-    <div class="footer-copyright">
-      <div class="container"><center>
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Jordan White Stephenson</a></centeR>
-      </div>
-    </div>
-  </footer>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <center>
+                            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Jordan White Stephenson</a></centeR>
+                    </div>
+                </div>
+    </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src = "js/addbook.js"></script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/addbook.js"></script>
 
-  </body>
+</body>
+
 </html>
